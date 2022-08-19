@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h2>Gezi Ayrıntılarım</h2>
+<table class="kisi">
+
+    <tr><td>ID:</td><td>{{ gezi.id }}</td></tr>
+    <tr><td>Adı Soyadi:</td><td>{{ gezi.adi }}</td></tr>
+    <tr><td>Seyahat ettiğim yer:</td><td>{{ gezi.yer }}</td></tr>
+    <tr><td>Seyahat ettiğim bölge:</td><td>{{ gezi.bolge }}</td></tr>
+    <tr><td>Fotoğraflarım</td><td>{{ gezi.foto }}</td></tr>
+    <tr><td>Anılarım</td><td>{{ gezi.ani }}</td></tr>
+
+</table>
+<p><a href="/menu2">Geri Dön</a></p>
+{% endblock content %}

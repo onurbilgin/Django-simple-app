@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1>Gezi Listelerim</h1>
+<table style="border-collapse:collapse">
+    <tr class="kisiheader">
+        <th>ID</th><th>Adı</th><th>Seyahat ettiğim yer</th><th>Seyahat ettiğim bölge</th><th>Anılarım</th><th>Ayrıntılar</th>
+    </tr>
+    {% for gezi in geziler %}
+        <tr class="kisisatir {% cycle 'bir' 'iki'  %}">
+            <td>{{ gezi.id }}</td>
+            <td>{{ gezi.adi }}</td>
+            <td>{{ gezi.yer }}</td>
+            <td>{{ gezi.bolge }}</td>
+            <td>{{ gezi.ani }}</td>
+            <td><a href="menu2/{{ gezi.id }}">Göster</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+{{ deneme }}
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Quote Login{% endblock title %}
+
+{% block content %}
+<h2>Lütfen Giriş Yapınız.</h2>
+<p> Admin Panel Bilgileri: ID:admin - Şifre:admin123</p>
+<form method="post" action="{% url 'login' %}">
+    <table>
+        {{ form.as_table }}
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <input class="btn btn-outline-secondary" type="submit" value="Giriş">
+            </td>
+        </tr>
+    </table>
+    &nbsp;
+    <p>Henüz Kayıt Olmadınız mı?<a href="{% url 'register' %}"> Buradan Kayıt Olun.</a> </p>
+    <input type="hidden" name="next" value="{{ next }}"/>
+    {% csrf_token %}
+</form>
+{% endblock content %}

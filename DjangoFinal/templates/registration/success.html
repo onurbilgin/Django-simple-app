@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+    {% block title %}Kullancı Kaydı Başarılı!
+    {% endblock title %}
+
+{%  block sidenav %}
+<li><a href="/">Home</a>/li>
+    {% endblock sidenav %}
+
+{% block content %}
+<h2> Kullanıcı Kaydı Başarılı!</h2>
+<p><a href="{% url 'login' %}?next=/">Buraya</a> tıklayarak giriş yapabilirsiniz.</p>
+    {% endblock content %}
